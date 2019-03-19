@@ -1,8 +1,6 @@
 
     // Listener for submit button click
     $('#submit').on('click', function(event) {
-            
-       
 
         // prevents the default submit button action
         event.preventDefault();
@@ -11,7 +9,7 @@
         let matchStatus = $('.modal-title');
         let modalBody = $('.modal-body');
 
-        // set responses to local variables
+        // Capture responses in local variables
         let name = $('#name').val().trim();
         let photo = $('#photo').val();
         let item1 = parseInt($('#item1').val());
@@ -42,6 +40,8 @@
                 item10
             ]
         };
+
+        console.log(userData);
         
         // Simple user input validation. Making sure that the required entries are not empty
         if (
@@ -50,13 +50,14 @@
             (!isNaN(item5)) && (!isNaN(item6)) && (!isNaN(item7)) &&
             (!isNaN(item8)) && (!isNaN(item9)) && (!isNaN(item10))
         ) {
-            // Grab the current url to add path for routing
-            let currentURL = window.location.origin;
+            // Grab the root url to add path for routing
+            let currentURL = window.location.origin;``
             console.log(currentURL);
+            console.table(userData);
             // post the data to the friends API. 
             $.post(currentURL + "/api/friends", userData, function(data) {
                 console.log(currentURL+'/api/friends');
-            		// If the data has a match, then show this
+                    // If the data has a match, then show this
                 if (data.name !== undefined) {
                     matchStatus.html('Your match...');
                     modalBody.html('<p>...is ' + data.name + '!</p><img src="' + data.photo + '" height="200">');
