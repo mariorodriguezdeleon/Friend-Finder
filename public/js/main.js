@@ -5,7 +5,7 @@
         // prevents the default submit button action
         event.preventDefault();
 
-        // Set local variables
+        // Set local variables to hook into the front-end
         let matchStatus = $('.modal-title');
         let modalBody = $('.modal-body');
 

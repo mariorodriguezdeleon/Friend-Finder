@@ -1,7 +1,6 @@
 
 const express = require('express');
 const routes = express.Router();
-
 const friends = require('../app/data/friends');
 
 routes.get('/friends', function(req, res) {
@@ -16,10 +15,6 @@ routes.post('/friends', function(req, res) {
 
     console.log('Posting to friends');
     console.log(req.body);
-
-    // let name = req.params.name;
-    // let photoURL = req.params.photoURL;
-    // let ans1 = req.params.ans1;
 
     friends.push(req.body);
 
