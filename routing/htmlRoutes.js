@@ -11,7 +11,7 @@ routes.get('/home', function(req, res) {
     res.sendFile(path.join(__dirname, '../public/home.html'));
 })
 
-routes.get('/servey', function(req, res) {
+routes.get('/survey', function(req, res) {
     res.sendFile(path.join(__dirname, '../public/survey.html'));
 })
 
