@@ -59,12 +59,12 @@
                 console.log(currentURL+'/api/friends');
                     // If the data has a match, then show this
                 if (data.name !== undefined) {
-                    matchStatus.html('Your match...');
+                    matchStatus.html('Your match is: ');
                     modalBody.html('<p>...is ' + data.name + '!</p><img src="' + data.photo + '" height="200">');
                 } else {
                 	// If no match, show this
                     matchStatus.html('Not enough data!');
-                    modalBody.html('<p>Unfortunately there is not yet enough user data to match you</p>');
+                    modalBody.html('<p>Please add more information!</p>');
                 }
                 // Toggle modal on
                 $('.modal').modal('toggle');
