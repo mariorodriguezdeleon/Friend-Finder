@@ -16,3 +16,9 @@ A simple tool that helps you find friends with common interests.
 One of the challenges I overcame during the implementation of this project was forgetting to setup the 'app.use(express.urlencoded({ extended: true }) middleware.  This consumed about 40 mins of my time.  I kept getting 'null' or undefine objects when trying to append to the JSON file.
 
 Crafting the logic to perform the match was a bit tricky.  It took me some time to figure out where to place that logic.
+
+## TODO's
+
+* 'Return Home' button is not showing up
+* Need to shorten up the fields. Currently they take up a large part of the screen
+* Picture URL do not display the img properly; could use a placeholder
