@@ -20,17 +20,16 @@ routes.post('/friends', function(req, res) {
     console.log(req.body);
 
     // Add logic to find friend match here
-
     friends.forEach(function(friends) {
         let matchScores = [];
         let totalDiff = 55;
 
-        function sum(total, num) {
-            return total + num;
-        }
-
         for(let i = 0; i < friends.scores.length; i++) {
             matchScores.push(Math.abs(parseInt(req.body.scores[i]) - parseInt(friends.scores[i])));
+        }
+
+        function sum(total, num) {
+            return total + num;
         }
 
         totalDiff = matchScores.reduce(sum, 0);
@@ -41,12 +40,12 @@ routes.post('/friends', function(req, res) {
             friendPhoto = friends.photo;
         }
     });
-    // Add logic to find friend match here 
+
     console.log(matchDiff + ' ' + friendMatch + ' ' + friendPhoto);
 
     friends.push(req.body);// push new user data to records. do this after finding the match
-    
-    res.json({
+
+    res.json({             // send match object response
         name: friendMatch,
         photo: friendPhoto
     });
