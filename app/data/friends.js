@@ -1,7 +1,7 @@
 let friends = [
     {
         name: 'Mario',
-        photo: '#',
+        photo: 'https://gph.is/1hCvNQf',
         scores: [
             5,
             5,
@@ -17,7 +17,7 @@ let friends = [
     },
     {
         name: 'Benjamin',
-        photo: '#',
+        photo: 'https://gph.is/1K8u03s',
         scores: [
             5,
             5,
@@ -33,7 +33,7 @@ let friends = [
     },
     {
         name: 'Audrey',
-        photo: '#',
+        photo: 'https://gph.is/1UUwGDW',
         scores: [
             5,
             5,
@@ -49,7 +49,7 @@ let friends = [
     },
     {
         name: 'Emily',
-        photo: '#',
+        photo: 'https://gph.is/15O8Anc',
         scores: [
             5,
             5,
