@@ -13,7 +13,7 @@ routes.post('/friends', function(req, res) {
     //DONE: Add logic to append a new friend to the frineds list
     //TODO: Add logic to match friends  
     let friendMatch = '';
-    let frinedPhoto = '';
+    let friendPhoto = '';
     let matchDiff = 55; //the greates diff
 
     console.log('Posting to friends');
@@ -38,13 +38,18 @@ routes.post('/friends', function(req, res) {
         if(totalDiff < matchDiff) {
             matchDiff = totalDiff;
             friendMatch = friends.name;
-            frinedPhoto = friends.photo;
+            friendPhoto = friends.photo;
         }
     });
     // Add logic to find friend match here 
+    console.log(matchDiff + ' ' + friendMatch + ' ' + friendPhoto);
 
     friends.push(req.body);// push new user data to records. do this after finding the match
-    res.send('Posted to Friends');
+    
+    res.json({
+        name: friendMatch,
+        photo: friendPhoto
+    });
 });
 
 module.exports = routes;
